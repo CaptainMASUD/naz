@@ -56,11 +56,11 @@ const Contact = () => {
           <div className="space-y-4">
             <div className="flex items-center">
               <FaMapMarkerAlt className="text-[#872341] mr-4 text-2xl" />
-              <span>123 Business St, City, Country</span>
+              <span>Dhulipara , Cumilla , BD</span>
             </div>
             <div className="flex items-center">
               <FaPhone className="text-[#872341] mr-4 text-2xl" />
-              <span>+1 234 567 8900</span>
+              <span>+880 1744 416607</span>
             </div>
             <div className="flex items-center">
               <FaEnvelope className="text-[#872341] mr-4 text-2xl" />
