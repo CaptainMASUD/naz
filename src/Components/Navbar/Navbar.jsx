@@ -45,14 +45,19 @@ const NavbarComponent = () => {
           </div>
           <div className="hidden md:flex items-center">
             <div className="flex items-center space-x-4 text-white">
-              <div className="flex items-center  hover:underline hover:text-[#e64e63] duration-500 cursor-pointer">
-                <FaEnvelope className="mr-2 mt-1" />
-                <span >info@naj.com</span>
-              </div>
-              <div className="flex items-center hover:underline hover:text-[#e64e63] duration-500 cursor-pointer">
-                <FaPhone className="mr-1 mt-1" />
-                <span>+880 1744 416607</span>
-              </div>
+            <div className="flex items-center hover:underline hover:text-[#e64e63] duration-500 cursor-pointer">
+  <FaEnvelope className="mr-2 mt-1" />
+  <a href="mailto:info@naj.com" className="hover:underline">
+    <span>info@naj.com</span>
+  </a>
+</div>
+<div className="flex items-center hover:underline hover:text-[#e64e63] duration-500 cursor-pointer">
+  <FaPhone className="mr-1 mt-1" />
+  <a href="tel:+8801744416607" className="hover:underline">
+    <span>+880 1744 416607</span>
+  </a>
+</div>
+
             </div>
           </div>
           <div className="md:hidden flex items-center">
