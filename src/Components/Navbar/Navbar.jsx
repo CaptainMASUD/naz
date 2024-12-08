@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { FaEnvelope, FaPhone, FaHome, FaCogs, FaInfoCircle, FaBars, FaTimes } from 'react-icons/fa';
 import { RiContactsLine } from "react-icons/ri";
 import logo from "../../logo/N.png"
@@ -29,10 +29,10 @@ const NavbarComponent = () => {
       <div className="max-w-7xl mx-auto px-4 sm:h-24">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <div className="flex-shrink-0 flex items-center">
+            <Link to="/" className="flex-shrink-0 flex items-center">
               <img src={logo} className="h-8 w-8 rounded-full mr-2" alt="NAJ Logo" />
               <span className="text-white text-xl font-semibold" style={{fontFamily : "Playwrite HR Lijeva"}}>Naj International </span>
-            </div>
+            </Link>
           </div>
          
           <div className="hidden md:flex items-center mt-16 justify-center flex-1">
