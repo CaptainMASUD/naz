@@ -3,8 +3,14 @@ import { motion } from 'framer-motion';
 import { FaArrowRight, FaPassport, FaFileContract, FaHome, FaUserGraduate } from 'react-icons/fa';
 import { MdHealthAndSafety, MdWork } from 'react-icons/md';
 import workPermitImage from "../../images/ServicesImg/workpermit.jpg";
+import { useNavigate } from 'react-router-dom';
 
 const NorwayPermitServices = () => {
+  const navigate = useNavigate()
+  const handleclick = () =>{
+    navigate("/contact")
+    scroll(0,0)
+  }
   const [activeTab, setActiveTab] = useState('process');
 
   const TabContent = ({ id, active, children }) => (
@@ -189,7 +195,7 @@ const NorwayPermitServices = () => {
             Let us be your trusted partner on your journey to working in Norway. Contact us today for expert guidance and support.
           </p>
           <a
-            href="/contact"
+            onClick={handleclick }
             className="bg-[#872341] text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-[#bd325c] transition duration-300 inline-flex items-center"
           >
             Contact Us
