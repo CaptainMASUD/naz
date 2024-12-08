@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { FaArrowRight, FaPassport, FaFileContract, FaHome, FaUserGraduate } from 'react-icons/fa';
 import { MdHealthAndSafety, MdWork } from 'react-icons/md';
 import workPermitImage from "../../images/ServicesImg/workpermit.jpg";
@@ -7,20 +8,41 @@ const NorwayPermitServices = () => {
   const [activeTab, setActiveTab] = useState('process');
 
   const TabContent = ({ id, active, children }) => (
-    <div className={`tab-content ${active ? 'block' : 'hidden'}`}>
+    <motion.div
+      className={`tab-content ${active ? 'block' : 'hidden'}`}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: active ? 1 : 0 }}
+      transition={{ duration: 0.5 }}
+    >
       {children}
-    </div>
+    </motion.div>
   );
 
   return (
-    <div className="bg-gradient-to-b from-blue-50 to-white min-h-screen">
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -50 }}
+      transition={{ duration: 0.8 }}
+      className=" min-h-screen"
+    >
       <div className="container mx-auto px-4 py-12">
-      <h1 className="text-4xl md:text-5xl font-bold text-center text-[#872341] mb-8"
-        style={{fontFamily : "Playwrite HR Lijeva"}}>
+        <motion.h1
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.6 }}
+          className="text-4xl md:text-5xl font-bold text-center text-[#872341] mb-8"
+          style={{ fontFamily: "Playwrite HR Lijeva" }}
+        >
           Norway Permit
-        </h1>
+        </motion.h1>
 
-        <div className="relative rounded-lg shadow-xl overflow-hidden mb-12">
+        <motion.div
+          className="relative rounded-lg shadow-xl overflow-hidden mb-12"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+        >
           <img
             src={workPermitImage}
             alt="Work Permit in Norway"
@@ -28,24 +50,39 @@ const NorwayPermitServices = () => {
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#233587d0] to-transparent flex items-center">
             <div className="text-white p-8">
-              <h2 className="text-4xl font-bold mb-4 text-white bg-[#872341c0] text-center rounded-lg" style={{ fontFamily: "Arial, sans-serif" }}>
+              <motion.h2
+                initial={{ x: -100, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.5 }}
+                className="text-4xl font-bold mb-4 text-white bg-[#872341c0] text-center rounded-lg"
+                style={{ fontFamily: "Arial, sans-serif" }}
+              >
                 Work Permit Services
-              </h2>
+              </motion.h2>
               <p className="text-xl">Your gateway to professional opportunities in Norway</p>
             </div>
           </div>
-        </div>
-        
+        </motion.div>
 
-        <div className="text-center mb-12">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-12"
+        >
           <h2 className="text-3xl font-semibold text-[#872341] mb-4">Expert Consultancy Services</h2>
           <p className="text-lg text-gray-700">
-            We specialize in assisting individuals and businesses in obtaining work permits for Norway. 
+            We specialize in assisting individuals and businesses in obtaining work permits for Norway.
             Let us guide you through the process with our expertise and personalized support.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="bg-white rounded-lg shadow-lg p-6 mb-12">
+        <motion.div
+          initial={{ y: 50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6 }}
+          className="bg-white rounded-lg shadow-lg p-6 mb-12"
+        >
           <h3 className="text-2xl font-semibold text-[#872341] mb-4">Our Services</h3>
           <div className="grid md:grid-cols-2 gap-6">
             <div className="flex items-start">
@@ -77,25 +114,40 @@ const NorwayPermitServices = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="bg-white rounded-lg shadow-lg p-6 mb-12">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="bg-white rounded-lg shadow-lg p-6 mb-12"
+        >
           <h3 className="text-2xl font-semibold text-[#872341] mb-4">Types of Work Permits</h3>
           <p className="text-gray-700">
-            Currently, we specialize in assisting warehouse workers for Norwegian employers.
+          Currently we are working Warehouse workers for Norway employer.
           </p>
-        </div>
+         
+        </motion.div>
 
-        <div className="bg-white rounded-lg shadow-lg p-6 mb-12">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="bg-white rounded-lg shadow-lg p-6 mb-12"
+        >
           <div className="flex border-b">
             <button
-              className={`flex-1 py-2 px-4 text-lg font-semibold ${activeTab === 'process' ? 'text-[#872341] border-b-2 border-[#872341]' : 'text-gray-500'}`}
+              className={`flex-1 py-2 px-4 text-lg font-semibold ${
+                activeTab === 'process' ? 'text-[#872341] border-b-2 border-[#872341]' : 'text-gray-500'
+              }`}
               onClick={() => setActiveTab('process')}
             >
               Application Process
             </button>
             <button
-              className={`flex-1 py-2 px-4 text-lg font-semibold ${activeTab === 'documents' ? 'text-[#872341] border-b-2 border-[#872341]' : 'text-gray-500'}`}
+              className={`flex-1 py-2 px-4 text-lg font-semibold ${
+                activeTab === 'documents' ? 'text-[#872341] border-b-2 border-[#872341]' : 'text-gray-500'
+              }`}
               onClick={() => setActiveTab('documents')}
             >
               Required Documents
@@ -124,25 +176,29 @@ const NorwayPermitServices = () => {
               <li className="flex items-center"><FaHome className="text-[#872341] mr-2" /> Proof of accommodation</li>
             </ul>
           </TabContent>
-        </div>
+        </motion.div>
 
-        <div className="text-center mt-12">
+        <motion.div
+          initial={{ scale: 0.9, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mt-12"
+        >
           <h2 className="text-3xl font-semibold mb-4 text-[#872341]">Need Professional Assistance?</h2>
           <p className="text-lg text-gray-700 mb-8">
             Let us be your trusted partner on your journey to working in Norway. Contact us today for expert guidance and support.
           </p>
           <a
             href="/contact"
-            className="bg-[#872341] text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-blue-700 transition duration-300 inline-flex items-center"
+            className="bg-[#872341] text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-[#bd325c] transition duration-300 inline-flex items-center"
           >
             Contact Us
             <FaArrowRight className="ml-2" />
           </a>
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
 export default NorwayPermitServices;
-

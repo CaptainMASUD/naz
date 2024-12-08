@@ -27,10 +27,10 @@ const FooterComponent = () => {
           >
             <h2 className="text-lg font-semibold mb-4">Services</h2>
             <ul className="space-y-2">
-              <li><a href="#" className="text-sm hover:text-gray-300 transition-colors">Consulting</a></li>
-              <li><a href="#" className="text-sm hover:text-gray-300 transition-colors">Development</a></li>
-              <li><a href="#" className="text-sm hover:text-gray-300 transition-colors">Design</a></li>
-              <li><a href="#" className="text-sm hover:text-gray-300 transition-colors">Support</a></li>
+              <li><a href="#" className="text-sm hover:text-gray-300 transition-colors">Work Permit Advisory</a></li>
+              <li><a href="#" className="text-sm hover:text-gray-300 transition-colors">Application Assistance</a></li>
+              <li><a href="#" className="text-sm hover:text-gray-300 transition-colors">Support for Employers</a></li>
+              <li><a href="#" className="text-sm hover:text-gray-300 transition-colors">Relocation Guidance</a></li>
             </ul>
           </motion.div>
           <motion.div

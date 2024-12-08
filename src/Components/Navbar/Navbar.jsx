@@ -26,7 +26,7 @@ const NavbarComponent = () => {
 
   return (
     <nav className="bg-[#1c1b1b] h-auto">
-      <div className="max-w-7xl mx-auto px-4 h-24">
+      <div className="max-w-7xl mx-auto px-4 sm:h-24">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0 flex items-center">

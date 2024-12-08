@@ -16,7 +16,7 @@ const About = () => {
         transition={{ duration: 0.5 }}
         className="text-5xl font-bold mb-12 text-center text-[#872341]"
       >
-        About NAZ
+        About NAJ
       </motion.h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
@@ -27,7 +27,7 @@ const About = () => {
         >
           <h2 className="text-3xl font-semibold mb-6 text-[#872341]">Our Story</h2>
           <p className="text-xl mb-6 text-gray-600">
-            NAZ was founded in 2010 with a vision to revolutionize the service industry. Since then, we have grown into a leading provider of innovative solutions, serving clients across various sectors.
+            NAJ was founded in 2010 with a vision to revolutionize the service industry. Since then, we have grown into a leading provider of innovative solutions, serving clients across various sectors.
           </p>
           <p className="text-xl mb-6 text-gray-600">
             Our commitment to excellence and customer satisfaction has been the driving force behind our success, allowing us to build long-lasting relationships with our clients and partners.
@@ -39,7 +39,7 @@ const About = () => {
           transition={{ duration: 0.5 }}
           className="flex items-center justify-center"
         >
-          <img src={img1} alt="NAZ Team" className="rounded-lg shadow-lg w-full h-auto" />
+          <img src={img1} alt="NAJ Team" className="rounded-lg shadow-lg w-full h-auto" />
         </motion.div>
       </div>
 
@@ -72,7 +72,7 @@ const About = () => {
       >
         <h2 className="text-3xl font-semibold mb-6 text-[#872341]">Our Mission</h2>
         <p className="text-xl mb-8 text-gray-600">
-          At NAZ, our mission is to empower businesses with innovative and reliable services that drive growth and success. We are committed to delivering excellence in every aspect of our work, fostering long-term partnerships, and contributing to the success of our clients.
+          At NAJ, our mission is to empower businesses with innovative and reliable services that drive growth and success. We are committed to delivering excellence in every aspect of our work, fostering long-term partnerships, and contributing to the success of our clients.
         </p>
         <h2 className="text-3xl font-semibold mb-6 text-[#872341]">Our Vision</h2>
         <p className="text-xl text-gray-600">
