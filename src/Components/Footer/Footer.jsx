@@ -14,10 +14,10 @@ const FooterComponent = () => {
           >
             <div className="flex items-center mb-4">
               <img src={logo} alt="NAZ Logo" className="h-10 w-10 rounded-full mr-2" />
-              <span className="text-xl font-bold">NAZ</span>
+              <span className="text-xl font-bold">NAJ</span>
             </div>
             <p className="text-sm text-gray-300">
-              Providing innovative solutions and exceptional service since 2010.
+              Providing innovative solutions and exceptional service since 2024.
             </p>
           </motion.div>
           <motion.div
@@ -55,15 +55,15 @@ const FooterComponent = () => {
             <ul className="space-y-2">
               <li className="flex items-center">
                 <FaMapMarkerAlt className="mr-2 text-sm" />
-                <span className="text-sm">123 Business St, City, Country</span>
+                <span className="text-sm">Dhulipara , Cumilla , BD</span>
               </li>
               <li className="flex items-center">
                 <FaPhone className="mr-2 text-sm" />
-                <span className="text-sm">+1 234 567 8900</span>
+                <span className="text-sm">+880 1744 416607</span>
               </li>
               <li className="flex items-center">
                 <FaEnvelope className="mr-2 text-sm" />
-                <span className="text-sm">info@naz.com</span>
+                <span className="text-sm">info@naj.com</span>
               </li>
             </ul>
           </motion.div>
@@ -76,7 +76,7 @@ const FooterComponent = () => {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="text-sm text-gray-300 mb-4 sm:mb-0"
           >
-            © 2023 NAZ™. All Rights Reserved.
+            © 2024 NAJ™. All Rights Reserved.
           </motion.span>
           <div className="flex space-x-4">
             {[

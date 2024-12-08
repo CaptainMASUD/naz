@@ -25,16 +25,17 @@ const NavbarComponent = () => {
   );
 
   return (
-    <nav className="bg-[#1c1b1b]">
-      <div className="max-w-7xl mx-auto px-4 ">
+    <nav className="bg-[#1c1b1b] h-auto">
+      <div className="max-w-7xl mx-auto px-4 h-24">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0 flex items-center">
-              <img src={logo} className="h-8 w-8 rounded-full mr-2" alt="NAZ Logo" />
-              <span className="text-white text-xl font-semibold">NAZ</span>
+              <img src={logo} className="h-8 w-8 rounded-full mr-2" alt="NAJ Logo" />
+              <span className="text-white text-xl font-semibold" style={{fontFamily : "Playwrite HR Lijeva"}}>Naj International </span>
             </div>
           </div>
-          <div className="hidden md:flex items-center justify-center flex-1">
+         
+          <div className="hidden md:flex items-center mt-16 justify-center flex-1">
             <div className="flex items-baseline space-x-4">
               <NavItem to="/" icon={FaHome}>Home</NavItem>
               <NavItem to="/services" icon={FaCogs}>Services</NavItem>
@@ -44,13 +45,13 @@ const NavbarComponent = () => {
           </div>
           <div className="hidden md:flex items-center">
             <div className="flex items-center space-x-4 text-white">
-              <div className="flex items-center hover:text-[#e64e63] duration-500 cursor-pointer">
+              <div className="flex items-center  hover:underline hover:text-[#e64e63] duration-500 cursor-pointer">
                 <FaEnvelope className="mr-2 mt-1" />
-                <span >info@naz.com</span>
+                <span >info@naj.com</span>
               </div>
-              <div className="flex items-center hover:text-[#e64e63] duration-500 cursor-pointer">
+              <div className="flex items-center hover:underline hover:text-[#e64e63] duration-500 cursor-pointer">
                 <FaPhone className="mr-1 mt-1" />
-                <span>+1 234 567 8900</span>
+                <span>+880 1744 416607</span>
               </div>
             </div>
           </div>
@@ -81,11 +82,11 @@ const NavbarComponent = () => {
           <div className="pt-4 pb-3 border-t border-gray-700">
             <div className="flex items-center px-5">
               <div className="flex-shrink-0">
-                <img src={logo} className="h-10 w-10 rounded-full" alt="NAZ Logo" />
+                <img src={logo} className="h-10 w-10 rounded-full" alt="NAJ Logo" />
               </div>
               <div className="ml-3">
-                <div className="text-base font-medium leading-none text-white">NAZ</div>
-                <div className="text-sm font-medium leading-none text-gray-400">info@naz.com</div>
+                <div className="text-base font-medium leading-none text-white">NAJ</div>
+                <div className="text-sm font-medium leading-none text-gray-400">info@NAJ.com</div>
               </div>
             </div>
             <div className="mt-3 px-2 space-y-1">

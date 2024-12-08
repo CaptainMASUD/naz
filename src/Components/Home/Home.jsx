@@ -30,9 +30,9 @@ const Home = () => {
         transition={{ duration: 0.5 }}
         className="mb-16 text-center"
       >
-        <h2 className="text-4xl font-bold mb-6 text-[#872341]">Welcome to NAZ</h2>
+        <h2 className="text-4xl font-bold mb-6 text-[#872341]">Welcome to NAJ</h2>
         <p className="text-xl mb-8 text-gray-600 max-w-3xl mx-auto">
-          NAZ is a leading service provider company dedicated to delivering exceptional solutions to our clients. With our expertise and commitment to excellence, we strive to meet and exceed your expectations in every project we undertake.
+          NAJ is a leading service provider company dedicated to delivering exceptional solutions to our clients. With our expertise and commitment to excellence, we strive to meet and exceed your expectations in every project we undertake.
         </p>
         <motion.a
           href="/services"
@@ -74,7 +74,7 @@ const Home = () => {
         transition={{ duration: 0.5, delay: 0.5 }}
         className="mb-16 bg-gray-100 rounded-lg p-8"
       >
-        <h2 className="text-3xl font-bold mb-6 text-center text-[#872341]">Why Choose NAZ?</h2>
+        <h2 className="text-3xl font-bold mb-6 text-center text-[#872341]">Why Choose NAJ?</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
             { title: "Comprehensive Services", description: "We offer a wide range of solutions to meet all your business needs." },
