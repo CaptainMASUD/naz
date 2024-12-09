@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { FaArrowRight, FaPassport, FaFileContract, FaHome, FaUserGraduate } from 'react-icons/fa';
 import { MdHealthAndSafety, MdWork } from 'react-icons/md';
 import workPermitImage from "../../images/ServicesImg/workpermit.jpg";
+import services from "../../images/ServicesImg/services.jpg";
 import { useNavigate } from 'react-router-dom';
 
 const NorwayPermitServices = () => {
@@ -130,9 +131,9 @@ const NorwayPermitServices = () => {
         >
           <h3 className="text-2xl font-semibold text-[#872341] mb-4">Types of Work Permits</h3>
           <p className="text-gray-700">
-          Currently we are working Warehouse workers for Norway employer.
+          Currently we are hiring :
           </p>
-         
+          <img src={services} alt="" />
         </motion.div>
 
         <motion.div

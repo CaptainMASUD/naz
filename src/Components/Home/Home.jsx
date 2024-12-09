@@ -1,26 +1,53 @@
-import React, { useEffect } from 'react';
-import { motion } from 'framer-motion';
+import React, { useEffect, useState } from 'react';
+import { motion ,AnimatePresence} from 'framer-motion';
 import { Carousel } from 'flowbite-react';
 import { FaPassport, FaUsers, FaBriefcase } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
+// import b1 from "../../images/banner/b1.jpg"
+// import b2 from "../../images/banner/b2.jpg"
+import b3 from "../../images/banner/b3.jpg"
+import b4 from "../../images/banner/b4.jpg"
+import b5 from "../../images/banner/b5.jpg"
+import b6 from "../../images/banner/b6.jpg"
 
-const banner1 = "https://images.pexels.com/photos/269077/pexels-photo-269077.jpeg";
-const banner2 = "https://images.unsplash.com/photo-1531973576160-7125cd663d86?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29tcGFueXxlbnwwfHwwfHx8MA%3D%3D";
-const banner3 = "https://purisconsulting.com/wp-content/uploads/2019/01/Company-Branding_team-work.png";
+const b1 = "https://plus.unsplash.com/premium_photo-1668017178993-4c8fc9f59872?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+const b2 = "https://plus.unsplash.com/premium_photo-1661962898863-a953de62bfd8?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 const norwayFlag = "https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Norway.svg";
 const bangladeshFlag = "https://upload.wikimedia.org/wikipedia/commons/f/f9/Flag_of_Bangladesh.svg";
 const rightImage = "https://t4.ftcdn.net/jpg/02/32/46/55/360_F_232465533_iyzj4gVUBSa99Xq6rhwQdxu5VH9iOo6w.jpg";
 
 const Home = () => {
   const navigate = useNavigate();
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  const scrollToTop = () => {
-    window.scrollTo(0, 0);
-  };
+  const slides = [
+    { src: b1, text: "Welcome to Our Company" },
+    { src: b2, text: "Expert Work Permit Services" },
+    { src: b3, text: "Your Trusted Partner in Employment" },
+    { src: b4, text: "Bringing Opportunities Closer to You" },
+    { src: b5, text: "Achieve Your Dreams with Us" },
+    { src: b6, text: "Your Gateway to Global Careers" },
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [slides.length]);
+
+  const scrollToTop = () => window.scrollTo(0, 0);
 
   const handleNavigation = (path) => {
     navigate(path);
     scrollToTop();
+  };
+
+  const slideAnimation = {
+    initial: { opacity: 0, scale: 0.95 },
+    animate: { opacity: 1, scale: 1 },
+    exit: { opacity: 0, scale: 1.05 },
   };
 
   return (
@@ -31,11 +58,34 @@ const Home = () => {
       className="container mx-auto"
     >
       {/* Slider Section */}
-      <Carousel className="h-64 sm:h-96 xl:h-120 2xl:h-144 mb-12 overflow-hidden">
-        <img src={banner1} alt="Service 1" className="object-cover w-full h-full" />
-        <img src={banner2} alt="Service 2" className="object-cover w-full h-full" />
-        <img src={banner3} alt="Service 3" className="object-cover w-full h-full" />
-      </Carousel>
+      <div className="relative h-64 sm:h-96 xl:h-120 2xl:h-144 mb-12 overflow-hidden">
+        <AnimatePresence>
+          {slides.map((slide, index) =>
+            index === currentIndex ? (
+              <motion.div
+                key={index}
+                className="absolute inset-0 w-full h-full"
+                variants={slideAnimation}
+                initial="initial"
+                animate="animate"
+                exit="exit"
+                transition={{ duration: 0.8 }}
+              >
+                <img
+                  src={slide.src}
+                  alt={`Slide ${index + 1}`}
+                  className="object-cover w-full h-full"
+                />
+                <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
+                  <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white text-center">
+                    {slide.text}
+                  </h2>
+                </div>
+              </motion.div>
+            ) : null
+          )}
+        </AnimatePresence>
+      </div>
 
       {/* Welcome Section */}
       <motion.section
@@ -65,7 +115,6 @@ const Home = () => {
         transition={{ duration: 0.6 }}
         className="grid grid-cols-1 md:grid-cols-2 items-center mb-16 gap-6"
       >
-        {/* Card Section */}
         <div className="bg-white rounded-lg shadow-lg p-6 text-center">
           <div className="flex justify-center gap-4 mb-6">
             <motion.img
@@ -101,7 +150,6 @@ const Home = () => {
           </motion.button>
         </div>
 
-        {/* Image Section */}
         <motion.img
           src={rightImage}
           alt="Work Permit Services"

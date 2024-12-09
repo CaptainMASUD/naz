@@ -64,7 +64,7 @@ const Contact = () => {
             </div>
             <div className="flex items-center">
               <FaEnvelope className="text-[#872341] mr-4 text-2xl" />
-              <span>info@naz.com</span>
+              <span>info@naj.com</span>
             </div>
           </div>
         </motion.div>
